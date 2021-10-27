@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('state', 45);
             $table->string('address', 60);
             $table->integer('age');
-            $table->char('gender', 2);
+            $table->string('gender', 1);
             $table->string('phone',13);
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
