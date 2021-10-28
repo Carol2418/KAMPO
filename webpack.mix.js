@@ -11,12 +11,19 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        require('postcss-import'),
-        require('tailwindcss'),
-    ]);
 
-if (mix.inProduction()) {
-    mix.version();
-}
+
+mix.styles([
+    'resources/skote/css/bootstrap.min.css',
+    'resources/skote/css/icons.min.css',
+    'resources/skote/css/app.min.css',
+],'public/css/app.css')
+
+    .scripts([
+    'resources/skote/js/jquery.min.js',
+    'resources/skote/js/bootstrap.bundle.min.js',
+    'resources/skote/js/metisMenu.min.js',
+    'resources/skote/js/simplebar.min.js',
+    'resources/skote/js/waves.min.js',
+    'resources/skote/js/app.js',
+],'public/js/app.js');
