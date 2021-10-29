@@ -10,7 +10,7 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href={{ asset('images/logo.jpeg') }}>
 
     <!-- Bootstrap Css -->
     <link rel="stylesheet" href="{{url('css/app.css')}}">
@@ -33,19 +33,19 @@
                 <div class="navbar-brand-box">
                     <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="assets/images/logo.svg" alt="" height="22">
+                                    <img src={{ asset('images/logo.jpeg') }}  alt="" height="22">
                                 </span>
                         <span class="logo-lg">
-                                    <img src="assets/images/logo-dark.png" alt="" height="17">
+                                    <img src={{ asset('images/logo.jpeg') }} alt="" height="17">
                                 </span>
                     </a>
 
                     <a href="index.html" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="assets/images/logo-light.svg" alt="" height="22">
+                                    <img src={{ asset('images/logo.jpeg') }} alt="" height="22">
                                 </span>
                         <span class="logo-lg">
-                                    <img src="assets/images/logo-light.png" alt="" height="19">
+                                    <img src={{ asset('images/logo.jpeg') }}  alt="" height="70">
                                 </span>
                     </a>
                 </div>
@@ -183,7 +183,7 @@
 
                                     <div class="col-sm-5">
                                         <div>
-                                            <img src="assets/images/megamenu-img.png" alt="" class="img-fluid mx-auto d-block">
+                                            <img src={{ asset('images/flags/us.jpg') }} alt="" class="img-fluid mx-auto d-block">
                                         </div>
                                     </div>
                                 </div>
@@ -220,33 +220,19 @@
                 <div class="dropdown d-inline-block">
                     <button type="button" class="btn header-item waves-effect"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img id="header-lang-img" src="assets/images/flags/us.jpg" alt="Header Language" height="16">
+                        <img id="header-lang-img" src={{ asset('images/flags/spain.jpg') }} alt="Header Language" height="16">
                     </button>
                     <div class="dropdown-menu dropdown-menu-end">
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="en">
-                            <img src="assets/images/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
+                            <img src={{ asset('images/flags/us.jpg') }} alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
                         </a>
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp">
-                            <img src="assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                            <img src={{ asset('images/flags/spain.jpg') }} alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
                         </a>
 
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr">
-                            <img src="assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
-                        </a>
-
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it">
-                            <img src="assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
-                        </a>
-
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru">
-                            <img src="assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
-                        </a>
                     </div>
                 </div>
 
@@ -398,7 +384,7 @@
                 <div class="dropdown d-inline-block">
                     <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                        <img class="rounded-circle header-profile-user" src= {{ asset('images/users/avatar1.png') }}
                              alt="Header Avatar">
                         <span class="d-none d-xl-inline-block ms-1" key="t-henry">Henry</span>
                         <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
@@ -493,208 +479,7 @@
     <!-- ============================================================== -->
     <!-- Start right Content here -->
     <!-- ============================================================== -->
-    <div class="main-content">
 
-        <div class="page-content">
-            <div class="container-fluid">
-
-                <!-- start page title -->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0 font-size-18">Images</h4>
-
-                            <div class="page-title-right">
-                                <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">UI Elements</a></li>
-                                    <li class="breadcrumb-item active">Images</li>
-                                </ol>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- end page title -->
-
-                <div class="row">
-                    <div class="col-xl-6">
-                        <div class="card">
-                            <div class="card-body">
-
-                                <h4 class="card-title">Image Rounded & Circle</h4>
-                                <p class="card-title-desc">Use classes
-                                    <code>.rounded</code> and <code>.rounded-circle</code>.</p>
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <img class="rounded me-2" alt="200x200" width="200" src="assets/images/small/img-4.jpg" data-holder-rendered="true">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="mt-4 mt-md-0">
-                                            <img class="rounded-circle avatar-xl" alt="200x200" src="assets/images/users/avatar-4.jpg" data-holder-rendered="true">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-
-                                <h4 class="card-title">Image thumbnails</h4>
-                                <p class="card-title-desc">In addition to our border-radius utilities, you can use
-                                    <code class="highlighter-rouge">.img-thumbnail</code> to give an image a
-                                    rounded 1px border appearance.</p>
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <img class="img-thumbnail" alt="200x200" width="200" src="assets/images/small/img-3.jpg" data-holder-rendered="true">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="mt-4 mt-md-0">
-                                            <img class="img-thumbnail rounded-circle avatar-xl" alt="200x200" src="assets/images/users/avatar-3.jpg" data-holder-rendered="true">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-6">
-                        <div class="card">
-                            <div class="card-body">
-
-                                <h4 class="card-title">Responsive images</h4>
-                                <p class="card-title-desc">Images in Bootstrap are made responsive
-                                    with <code class="highlighter-rouge">.img-fluid</code>. <code
-                                        class="highlighter-rouge">max-width: 100%;</code> and <code
-                                        class="highlighter-rouge">height: auto;</code> are applied to
-                                    the image so that it scales with the parent element.</p>
-
-                                <div class="">
-                                    <img src="assets/images/small/img-2.jpg" class="img-fluid" alt="Responsive image">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- end row -->
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title mb-4">Image Sizes</h4>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <div>
-                                                    <img src="assets/images/users/avatar-3.jpg" alt="" class="rounded avatar-sm">
-                                                    <p class="mt-2 mb-lg-0"><code>.avatar-sm</code></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div>
-                                                    <img src="assets/images/users/avatar-4.jpg" alt="" class="rounded avatar-md">
-                                                    <p class="mt-2  mb-lg-0"><code>.avatar-md</code></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div>
-                                                    <img src="assets/images/users/avatar-5.jpg" alt="" class="rounded avatar-lg">
-                                                    <p class="mt-2 mb-lg-0"><code>.avatar-lg</code></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <div>
-                                                    <img src="assets/images/users/avatar-3.jpg" alt="" class="rounded-circle avatar-sm">
-                                                    <p class="mt-2 mb-lg-0"><code>.avatar-sm</code></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div>
-                                                    <img src="assets/images/users/avatar-4.jpg" alt="" class="rounded-circle avatar-md">
-                                                    <p class="mt-2  mb-lg-0"><code>.avatar-md</code></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div>
-                                                    <img src="assets/images/users/avatar-5.jpg" alt="" class="rounded-circle avatar-lg">
-                                                    <p class="mt-2 mb-lg-0"><code>.avatar-lg</code></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-
-
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Media Object</h4>
-                                <p class="card-title-desc">The images or other media can be
-                                    aligned top, middle, or bottom. The default is top aligned.
-                                </p>
-
-                                <!-- Start Media Object -->
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 me-3">
-                                        <img class="rounded avatar-sm" src="assets/images/users/avatar-3.jpg" alt="Generic placeholder image">
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h5>Top-aligned media</h5>
-                                        <p class="mb-0">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                                    </div>
-                                </div>
-                                <!-- End Media Object -->
-
-                                <hr>
-
-                                <!-- Start Media Object -->
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0 me-3">
-                                        <img class="rounded avatar-sm" src="assets/images/users/avatar-5.jpg" alt="Generic placeholder image">
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h5>Center-aligned media</h5>
-                                        <p class="mb-0">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                                    </div>
-                                </div>
-                                <!-- End Media Object -->
-
-                                <hr>
-
-                                <!-- Start Media Object -->
-                                <div class="d-flex align-items-end">
-                                    <div class="flex-shrink-0 me-3">
-                                        <img class="rounded avatar-sm" src="assets/images/users/avatar-1.jpg" alt="Generic placeholder image">
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h5>Bottom-aligned media</h5>
-                                        <p class="mb-0">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                                    </div>
-                                </div>
-                                <!-- End Media Object -->
-
-                            </div><!-- end card-body -->
-                        </div><!-- end card -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
-
-            </div> <!-- container-fluid -->
-        </div>
-        <!-- End Page-content -->
 
 
         <footer class="footer">
