@@ -33,19 +33,19 @@
                 <div class="navbar-brand-box">
                     <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src={{ asset('images/logo.jpeg') }}  alt="" height="22">
+                                    <img src={{ asset('images/campo.png') }}  alt="" height="70">
                                 </span>
                         <span class="logo-lg">
-                                    <img src={{ asset('images/logo.jpeg') }} alt="" height="17">
+                                    <img src={{ asset('images/campo.png') }} alt="" height="70">
                                 </span>
                     </a>
 
                     <a href="index.html" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src={{ asset('images/logo.jpeg') }} alt="" height="22">
+                                    <img src={{ asset('images/campo.png') }} alt="" height="70">
                                 </span>
                         <span class="logo-lg">
-                                    <img src={{ asset('images/logo.jpeg') }}  alt="" height="70">
+                                    <img src={{ asset('images/campo.png') }}  alt="" height="70">
                                 </span>
                     </a>
                 </div>
@@ -486,11 +486,11 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-6">
-                        <script>document.write(new Date().getFullYear())</script> © Skote.
+                        <script>document.write(new Date().getFullYear())</script> © Kampo.
                     </div>
                     <div class="col-sm-6">
                         <div class="text-sm-end d-none d-sm-block">
-                            Design & Develop by Themesbrand
+                            El Campo Mas Cerca De Ti
                         </div>
                     </div>
                 </div>
