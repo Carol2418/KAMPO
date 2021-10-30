@@ -10,7 +10,7 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href={{ asset('images/logo.jpeg') }}>
+    <link rel="shortcut icon" href={{ asset('images/campos.png') }}>
 
     <!-- Bootstrap Css -->
     <link rel="stylesheet" href="{{url('css/app.css')}}">
@@ -183,7 +183,7 @@
 
                                     <div class="col-sm-5">
                                         <div>
-                                            <img src={{ asset('images/flags/us.jpg') }} alt="" class="img-fluid mx-auto d-block">
+                                            <img src={{ asset('images/megamenu-img.png') }} alt="" class="img-fluid mx-auto d-block">
                                         </div>
                                     </div>
                                 </div>
@@ -384,7 +384,7 @@
                 <div class="dropdown d-inline-block">
                     <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="rounded-circle header-profile-user" src= {{ asset('images/users/avatar1.png') }}
+                        <img class="rounded-circle header-profile-user" src={{ asset('images/users/avatar1.png') }}
                              alt="Header Avatar">
                         <span class="d-none d-xl-inline-block ms-1" key="t-henry">Henry</span>
                         <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
