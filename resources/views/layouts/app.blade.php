@@ -21,7 +21,6 @@
 <body data-sidebar="dark">
 
 <!-- <body data-layout="horizontal" data-topbar="dark"> -->
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur consectetur debitis dolores, enim, error fuga inventore iste, quo ratione rerum sint! Atque excepturi laboriosam, libero nihil officiis qui ullam.
 <!-- Begin page -->
 <div id="layout-wrapper">
 
