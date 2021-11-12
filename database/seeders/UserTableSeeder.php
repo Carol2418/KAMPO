@@ -30,7 +30,7 @@ class UserTableSeeder extends Seeder
             'password'=>Hash::make('password')
         ]);
         $user->assignRole('admin');
-        /*$user->assignRole('merchant');
+
         $user =User::create([
             'name'=>'Comerciante',
             'email'=>'merchant@gmail.com',
@@ -49,6 +49,6 @@ class UserTableSeeder extends Seeder
             'password'=>Hash::make('password')
         ]);
         $user->assignRole('admin');
-        */
+
     }
 }
