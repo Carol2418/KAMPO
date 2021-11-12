@@ -16,7 +16,7 @@ use App\Http\Controllers\ProductsController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('user', [UsersController::class, 'index'])->name('Users.index');

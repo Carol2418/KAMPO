@@ -2,6 +2,9 @@
 <br>
 @section('content')
     <div class="container">
+        @role('admins')
+        esto solo lo va a ver un admin
+        @endrole
 
         <br>
         <div class="table-responsive"></div>
