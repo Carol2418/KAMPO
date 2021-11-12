@@ -51,10 +51,7 @@
                 <td>CORREO</td>
                 <td>{{$user->email}}</td>
             </tr>
-            <tr>
-                <td>CONTRASEÑA</td>
-                <td>{{$user->password}}</td>
-            </tr>
+           
             </thead>
         </table>
         <a href="{{route('Users.index')}}" class="btn btn-success btn-sm">Volver al inicio</a>
