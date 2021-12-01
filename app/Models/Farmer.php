@@ -12,6 +12,11 @@ class Farmer extends Model
         'address',
         'crops',
         'land_type',
-        'user_id'
+        'users_id'
     ];
+    public function user()
+{
+    return $this->belongsTo(User::class, 'users_id');
+}
+
 }

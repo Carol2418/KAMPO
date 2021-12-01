@@ -69,4 +69,8 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+    public function farmers ()
+    {
+        return $this->hasMany(Farmer::class, 'user_id');
+    }
 }

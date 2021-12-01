@@ -31,7 +31,7 @@ class UserTableSeeder extends Seeder
         ]);
         $user->assignRole('admin');
 
-        $user =User::create([
+       /*$user =User::create([
             'name'=>'Comerciante',
             'email'=>'merchant@gmail.com',
             'password'=>Hash::make('password')
@@ -43,12 +43,14 @@ class UserTableSeeder extends Seeder
             'password'=>Hash::make('password')
         ]);
         $user->assignRole('courier');
+
         $user =User::create([
             'name'=>'Transportador',
             'email'=>'courier@gmail.com',
             'password'=>Hash::make('password')
         ]);
-        $user->assignRole('admin');
+        $user->assignRole('admin');*/
+
 
     }
 }

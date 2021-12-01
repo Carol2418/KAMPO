@@ -1,15 +1,10 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.app')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-jet-welcome />
-            </div>
-        </div>
-    </div>
-</x-app-layout>
+@section('content')
+    <h1 class="font-forte" style="padding-left:320px" >BIENVENIDOS A </h1>
+    <img src={{ asset('images/dashboard.png') }} alt="" class="img-fluid mx-auto d-block " />
+
+
+
+
+@endsection

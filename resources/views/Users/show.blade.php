@@ -51,7 +51,7 @@
                 <td>CORREO</td>
                 <td>{{$user->email}}</td>
             </tr>
-           
+
             </thead>
         </table>
         <a href="{{route('Users.index')}}" class="btn btn-success btn-sm">Volver al inicio</a>

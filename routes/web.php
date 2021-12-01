@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\FarmersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,15 @@ Route::put('Products/{id}',[ProductsController::class,'update'])->name('Products
 Route::get('Products1/create',[ ProductsController::class,'create'])->name('Products.create');
 Route::post('Products',[ProductsController::class,'store'])->name('Products.store');
 Route::delete('Products/{id}', [ProductsController::class, 'destroy'])->name('Products.destroy');
+
+Route::get('Farmers', [FarmersController::class, 'index'])->name('Farmers.index');
+Route::get('Farmers/{id}', [FarmersController::class, 'show'])->name('Farmers.show');
+Route::get('Farmers/{id}/edit', [FarmersController::class, 'edit'])->name('Farmers.edit');
+Route::put('Farmers/{id}',[FarmersController::class,'update'])->name('Farmers.update');
+Route::get('Farmers1/create',[ FarmersController::class,'create'])->name('Farmers.create');
+Route::post('Farmers',[FarmersController::class,'store'])->name('Farmers.store');
+Route::delete('Farmers/{id}', [FarmersController::class, 'destroy'])->name('Farmers.destroy');
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
