@@ -12,39 +12,46 @@
                 <thead >
                 <tr>
                     <td>NOMBRE</td>
-                    <td><input type="text" class="Form-control" name="name" value="{{$product->name}}"></td>
+                    <td><input type="text" class="form-control" name="name" value="{{$product->name}}"></td>
                 </tr>
                 <tr>
                     <td>TIPO DE PRODUCTO</td>
-                    <td><input type="text" class="Form-control" name="type" value="{{$product->type}}"></td>
+                    <td><input type="text" class="form-control" name="type" value="{{$product->type}}"></td>
                 </tr>
                 <tr>
                     <td>FECHA DE VENCIMIENTO</td>
-                    <td><input type="text" class="Form-control" name="expiration_date" value="{{$product->expiration_date}}"></td>
+                    <td><input type="text" class="form-control" name="expiration_date" value="{{$product->expiration_date}}"></td>
                 </tr>
                 <tr>
                     <td>CANTIDAD DE PRODUCTO</td>
-                    <td><input type="text" class="Form-control" name="quantity_units" value="{{$product->quantity_units}}"></td>
+                    <td><input type="text" class="form-control" name="quantity_units" value="{{$product->quantity_units}}"></td>
                 </tr>
                 <tr>
                     <td>VALOR DEL PRODUCTO</td>
-                    <td><input type="text" class="Form-control" name="minimum_value" value="{{$product->minimum_value}}"></td>
+                    <td><input type="text" class="form-control" name="minimum_value" value="{{$product->minimum_value}}"></td>
                 </tr>
                 <tr>
                     <td>IMAGEN</td>
-                    <td><input type="text" class="Form-control" name="image" value="{{$product->image}}"></td>
+                    <td><input type="text" class="form-control" name="image" value="{{$product->image}}"></td>
                 </tr>
                 <tr>
                     <td>TIPO DE PAQUETE</td>
-                    <td><input type="text" class="Form-control" name="packaging" value="{{$product->packaging}}"></td>
+                    <td><input type="text" class="form-control" name="packaging" value="{{$product->packaging}}"></td>
                 </tr>
                 <tr>
                     <td>VALOR MINIMO</td>
-                    <td><input type="text" class="Form-control" name="unit_value" value="{{$product->unit_value}}"></td>
+                    <td><input type="text" class="form-control" name="unit_value" value="{{$product->unit_value}}"></td>
                 </tr>
                 <tr>
-                    <td>AGRICULTOR</td>
-                    <td><input type="text" class="Form-control" name="farmers_id" value="{{$product->farmers_id}}"></td>
+                    <td>NOMBRE DEL AGRICULTOR</td>
+                    <td class="form-group">
+                        <select required name="farmers_id" id="farmers_id" class="form-control">
+                            <option value="">Seleccione el agricultor</option>
+                            @foreach($p as $id => $full_name)
+                                <option value="{{$id}}"{{$id == old('farmers_id', $product->farmers_id) ? 'selected' : ''}}>{{$full_name}}</option>
+                            @endforeach
+                        </select>
+                    </td>
                 </tr>
 
                 </thead>

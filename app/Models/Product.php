@@ -19,4 +19,8 @@ class Product extends Model
         'unit_value' ,
         'farmers_id'
     ];
+    public function farmer()
+    {
+        return $this->belongsTo(Farmer::class, 'farmers_id');
+    }
 }

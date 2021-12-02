@@ -18,5 +18,9 @@ class Farmer extends Model
 {
     return $this->belongsTo(User::class, 'users_id');
 }
+    public function product()
+    {
+        return $this->hasMany(Product::class, 'farmers_id');
+    }
 
 }

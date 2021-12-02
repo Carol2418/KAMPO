@@ -12,23 +12,23 @@
                 <thead >
                 <tr>
                     <td>DIRECCIÓN</td>
-                    <td><input type="text" class="Form-control" name="address" value="{{$farmer->address}}"></td>
+                    <td><input type="text" class="form-control" name="address" value="{{$farmer->address}}"></td>
                 </tr>
                 <tr>
                     <td>TIPO DE CULTIVO</td>
-                    <td><input type="text" class="Form-control" name="crops" value="{{$farmer->crops}}"></td>
+                    <td><input type="text" class="form-control" name="crops" value="{{$farmer->crops}}"></td>
                 </tr>
                 <tr>
                     <td>TIPO DE TERRENO</td>
-                    <td><input type="text" class="Form-control" name="land_type" value="{{$farmer->land_type}}"></td>
+                    <td><input type="text" class="form-control" name="land_type" value="{{$farmer->land_type}}"></td>
                 </tr>
                 <tr>
                     <td>NOMBRE DEL AGRICULTOR</td>
                     <td class="form-group">
                         <select required name="user_id" id="user_id" class="form-control">
                             <option value="">Seleccione un usuario</option>
-                            @foreach($users as $user)
-                                <option value="{{$user->id}}">{{$user->full_name}}</option>
+                            @foreach($p as $id => $full_name)
+                                <option value="{{$id}}"{{$id == old('users_id', $farmer->users_id) ? 'selected' : ''}}>{{$full_name}}</option>
                             @endforeach
                         </select>
                     </td>

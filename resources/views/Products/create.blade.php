@@ -10,40 +10,47 @@
             <table class="table table-success" >
                 <thead >
                 <tr>
-                    <td>NOMBRE</td>
-                    <td><input type="text" class="Form-control" name="name" value=""></td>
+                    <td>NOMBRE DEL PRODUCTO</td>
+                    <td><input type="text" class="form-control" name="name" value=""></td>
                 </tr>
                 <tr>
                     <td>TIPO DE PRODUCTO</td>
-                    <td><input type="text" class="Form-control" name="type" value=""></td>
+                    <td><input type="text" class="form-control" name="type" value=""></td>
                 </tr>
                 <tr>
                     <td>FECHA DE VENCIMIENTO</td>
-                    <td><input type="date" class="Form-control" name="expiration_date" value=""></td>
+                    <td><input type="date" class="form-control" name="expiration_date" value=""></td>
                 </tr>
                 <tr>
                     <td>CANTIDAD DE PRODUCTO</td>
-                    <td><input type="text" class="Form-control" name="quantity_units" value=""></td>
+                    <td><input type="text" class="form-control" name="quantity_units" value=""></td>
                 </tr>
                 <tr>
                     <td>VALOR DEL PRODUCTO</td>
-                    <td><input type="text" class="Form-control" name="minimum_value" value=""></td>
+                    <td><input type="text" class="form-control" name="minimum_value" value=""></td>
                 </tr>
                 <tr>
                     <td>IMAGEN</td>
-                    <td><input type="text" class="Form-control" name="image" value=""></td>
+                    <td><input type="text" class="form-control" name="image" value=""></td>
                 </tr>
                 <tr>
                     <td>TIPO DE PAQUETE</td>
-                    <td><input type="text" class="Form-control" name="packaging" value=""></td>
+                    <td><input type="text" class="form-control" name="packaging" value=""></td>
                 </tr>
                 <tr>
                     <td>VALOR MINIMO</td>
-                    <td><input type="text" class="Form-control" name="unit_value" value=""></td>
+                    <td><input type="text" class="form-control" name="unit_value" value=""></td>
                 </tr>
                 <tr>
-                    <td>AGRICULTOR</td>
-                    <td><input type="text" class="Form-control" name="farmers_id" value=""></td>
+                    <td>NOMBRE DEL AGRICULTOR</td>
+                    <td class="form-group">
+                        <select required name="farmers_id" id="farmers_id" class="form-control">
+                            <option value="">Seleccione el agricultor</option>
+                            @foreach($c as $id => $full_name)
+                                <option value="{{$id}}">{{$full_name}}</option>
+                            @endforeach
+                        </select>
+                    </td>
                 </tr>
 
                 </thead>

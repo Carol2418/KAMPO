@@ -30,12 +30,7 @@ class FarmersController extends Controller
         return  view('Farmers.create', compact('users'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         $farmer=farmer::create([
@@ -68,7 +63,9 @@ class FarmersController extends Controller
     public function edit($id)
     {
         $farmer=farmer::find($id);
-        return  view('Farmers.edit', compact('farmer'));
+        $users=User:: all();
+        $p=User::pluck('full_name','id');
+        return  view('Farmers.edit', compact('farmer','users','p'));
     }
 
     /**
@@ -80,11 +77,12 @@ class FarmersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $farmer=farmer::update([
+
+        $farmer=farmer::find($id)->update ([
             'address'=>$request->input('address'),
             'crops'=>$request->input('crops'),
             'land_type'=> $request->input('land_type'),
-            'user_id'=>$request->input('user_id'),
+            'users_id'=>$request->input('user_id'),
         ]);
         return redirect()->route('Farmers.index');
     }

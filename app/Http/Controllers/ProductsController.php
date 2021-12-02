@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Farmer;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -25,18 +27,20 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return  view('Products.create');
+
+        #$users=User:: all();
+        #return  view('Products.create', compact('users'));
+
+        $farmer=Farmer:: all();
+        $p =User::pluck('full_name','id');
+        return  view('Products.create', compact('farmer','p'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
-        $product=product::create([
+
+        $products=product::create([
             'name'=>$request ->input('name'),
             'type'=>$request ->input('type'),
             'expiration_date'=>$request ->input('expiration_date'),
@@ -45,8 +49,9 @@ class ProductsController extends Controller
             'image'=>$request ->input('image'),
             'packaging'=>$request ->input('packaging'),
             'unit_value' =>$request ->input('unit_value'),
-            'farmers_id' =>$request ->input('farmers_id'),
+            'farmers_id' =>$request ->input('farmers_id')
         ]);
+
         return redirect()->route('Products.index');
     }
 
@@ -71,19 +76,15 @@ class ProductsController extends Controller
     public function edit($id)
     {
         $product=product::find($id);
-        return  view('Products.edit', compact('product'));
+        $farmer=Farmer:: all();
+        $p =User::pluck('full_name','id');
+        return  view('Products.edit', compact('product','farmer','p'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
-        $product=product::update([
+        $product=product::find($id)->update([
             'name'=>$request ->input('name'),
             'type'=>$request ->input('type'),
             'expiration_date'=>$request ->input('expiration_date'),

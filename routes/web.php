@@ -17,7 +17,7 @@ use App\Http\Controllers\FarmersController;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('welcome');
 });
 
 Route::get('user', [UsersController::class, 'index'])->name('Users.index');
