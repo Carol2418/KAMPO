@@ -47,8 +47,9 @@
                     <td class="form-group">
                         <select required name="farmers_id" id="farmers_id" class="form-control">
                             <option value="">Seleccione el agricultor</option>
-                            @foreach($p as $id => $full_name)
-                                <option value="{{$id}}"{{$id == old('farmers_id', $product->farmers_id) ? 'selected' : ''}}>{{$full_name}}</option>
+                            @foreach($Resul2 as $id => $full_name)
+                                <option value="{{$id}}"{{$id==old('farmers_id', $product->farmers_id ) ? 'selected' : ''}}>{{$full_name}}</option>
+                                <!--<option value="{{$id}}"{{$id == old('farmers_id', $product->farmers_id) ? 'selected' : ''}}>{{$full_name}}</option>-->
                             @endforeach
                         </select>
                     </td>

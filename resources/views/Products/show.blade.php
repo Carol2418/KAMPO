@@ -41,7 +41,7 @@
             </tr>
             <tr>
                 <td>AGRICULTOR</td>
-                <td>{{$product->farmers_id}}</td>
+                <td>{{$product->farmer->user->full_name}}</td>
             </tr>
             </thead>
         </table>

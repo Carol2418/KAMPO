@@ -6,6 +6,8 @@ use App\Models\Farmer;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
+use mysql_xdevapi\Result;
 
 class ProductsController extends Controller
 {
@@ -31,9 +33,16 @@ class ProductsController extends Controller
         #$users=User:: all();
         #return  view('Products.create', compact('users'));
 
-        $farmer=Farmer:: all();
-        $p =User::pluck('full_name','id');
-        return  view('Products.create', compact('farmer','p'));
+        /*$farmer=Farmer:: pluck('id');
+        $p =User::pluck('full_name');
+        $c = $farmer.$p;
+        return  view('Products.create', compact('farmer','p','c'));*/
+
+        $Resul=Farmer::join('users','users.id', '=', 'farmers.users_id')
+        ->select('farmers.id','users.full_name')
+            ->get();
+
+        return view('Products.create', compact('Resul'));
     }
 
 
@@ -64,7 +73,10 @@ class ProductsController extends Controller
     public function show($id)
     {
         $product=product::find($id);
-        return  view('Products.show', compact('product'));
+        $farmers=Farmer::all();
+        $p=User::pluck('full_name','id');
+
+        return  view('Products.show', compact('product','farmers'));
     }
 
     /**
@@ -76,9 +88,14 @@ class ProductsController extends Controller
     public function edit($id)
     {
         $product=product::find($id);
-        $farmer=Farmer:: all();
-        $p =User::pluck('full_name','id');
-        return  view('Products.edit', compact('product','farmer','p'));
+        $farmers=Farmer::all();
+        $Resul=Farmer::join('users','users.id', '=', 'farmers.users_id')
+            ->select('farmers.id','users.full_name')
+            ->get();
+        $Resul2 = $Resul->pluck('full_name', 'id');
+
+        return  view('Products.edit', compact('product','Resul2','farmers'));
+
     }
 
 

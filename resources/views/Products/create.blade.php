@@ -46,8 +46,8 @@
                     <td class="form-group">
                         <select required name="farmers_id" id="farmers_id" class="form-control">
                             <option value="">Seleccione el agricultor</option>
-                            @foreach($c as $id => $full_name)
-                                <option value="{{$id}}">{{$full_name}}</option>
+                            @foreach($Resul as $Resu)
+                                <option value="{{$Resu->id}}">{{$Resu->full_name}}</option>
                             @endforeach
                         </select>
                     </td>
