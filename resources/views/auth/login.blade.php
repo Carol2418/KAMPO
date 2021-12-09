@@ -3,10 +3,9 @@
 @section('content')
 <div class="container" style="height: auto;">
   <div class="row align-items-center">
-    <div class="col-md-9 ml-auto mr-auto mb-3 text-center">
-
-    <h1><b>KAMPO</b></h1>
-      <h3>VENDA Y COMPRE A LOS MEJORES PRECIOS</h3>
+    <div class="col-md-4 ml-auto mr-auto mb-3 text-center">
+    <img src={{ asset('img/login2.png') }} alt="" class="img-fluid mx-auto d-block " />
+      <h3><b>Venda y compre a los mejores precios</b></h3>
     </div>
     <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
       <form class="form" method="POST" action="{{ route('login') }}">

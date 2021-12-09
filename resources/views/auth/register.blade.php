@@ -9,7 +9,7 @@
 
         <div class="card card-login card-hidden mb-3">
           <div class="card-header card-header-primary text-center">
-            <h4 class="card-title"><strong>{{ __('Register') }}</strong></h4>
+            <h4 class="card-title"><strong>{{ __('Registrese') }}</strong></h4>
             <div class="social-line">
               <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
                 <i class="fa fa-facebook-square"></i>
@@ -24,7 +24,7 @@
           </div>
           <!--Name-->
           <div class="card-body ">
-            <p class="card-description text-center">{{ __('Or Be Classical') }}</p>
+            <p class="card-description text-center">{{ __('Introduzca sus datos') }}</p>
             <div class="bmd-form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
               <div class="input-group">
                 <div class="input-group-prepend">
@@ -235,12 +235,12 @@
                 <span class="form-check-sign">
                   <span class="check"></span>
                 </span>
-                {{ __('I agree with the ') }} <a href="#">{{ __('Privacy Policy') }}</a>
+                {{ __('Estoy de acuerdo con la  ') }} <a href="#">{{ __('Política de privacidad') }}</a>
               </label>
             </div>
           </div>
           <div class="card-footer justify-content-center">
-            <button type="submit" class="btn btn-primary btn-link btn-lg">{{ __('Create account') }}</button>
+            <button type="submit" class="btn btn-primary btn-link btn-lg">{{ __('Crear cuenta') }}</button>
           </div>
         </div>
       </form>
