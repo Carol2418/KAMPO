@@ -29,7 +29,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                      <i class="material-icons">face</i>
+                      <i class="material-icons">supervisor_account</i>
                   </span>
                 </div>
                 <input type="text" name="name" class="form-control" placeholder="{{ __('Rol...') }}" value="{{ old('name') }}" required autocomplete="name">
@@ -45,7 +45,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons">face</i>
+                    <i class="material-icons">contact_page</i>
                   </span>
                 </div>
                 <input type="text" name="document_type" class="form-control" placeholder="{{ __('Tipo de Documento...') }}" value="{{ old('document_type') }}" required autocomplete="document_type">
@@ -61,7 +61,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons">face</i>
+                    <i class="material-icons">notes</i>
                   </span>
                 </div>
                 <input type="text" name="document_number" class="form-control" placeholder="{{ __('Numero de Documento...') }}" value="{{ old('document_number') }}" required autocomplete="document_number">
@@ -93,7 +93,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons">email</i>
+                    <i class="material-icons">location_city</i>
                   </span>
                 </div>
                 <input type="text" name="city" class="form-control" placeholder="{{ __('Ciudad...') }}" value="{{ old('city') }}" required autocomplete="city">
@@ -109,7 +109,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons">email</i>
+                    <i class="material-icons">apartment</i>
                   </span>
                 </div>
                 <input type="text" name="state" class="form-control" placeholder="{{ __('Departamento...') }}" value="{{ old('state') }}" required autocomplete="state">
@@ -125,7 +125,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons">email</i>
+                    <i class="material-icons">home</i>
                   </span>
                 </div>
                 <input type="text" name="address" class="form-control" placeholder="{{ __('Dirección...') }}" value="{{ old('address') }}" required autocomplete="address">
@@ -141,7 +141,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons">email</i>
+                    <i class="material-icons">person</i>
                   </span>
                 </div>
                 <input type="text" name="age" class="form-control" placeholder="{{ __('Edad...') }}" value="{{ old('age') }}" required autocomplete="age">
@@ -157,7 +157,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons">email</i>
+                    <i class="material-icons">male</i>
                   </span>
                 </div>
                 <input type="text" name="gender" class="form-control" placeholder="{{ __('Genero...') }}" value="{{ old('gender') }}" required autocomplete="gender">
@@ -173,7 +173,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons">email</i>
+                    <i class="material-icons">phone_iphone</i>
                   </span>
                 </div>
                 <input type="text" name="phone" class="form-control" placeholder="{{ __('Telefono...') }}" value="{{ old('phone') }}" required autocomplete="phone">
@@ -191,7 +191,7 @@
                     <i class="material-icons">email</i>
                   </span>
                 </div>
-                <input type="email" name="email" class="form-control" placeholder="{{ __('Email...') }}" value="{{ old('email') }}" required>
+                <input type="email" name="email" class="form-control" placeholder="{{ __('Correo...') }}" value="{{ old('email') }}" required>
               </div>
               @if ($errors->has('email'))
                 <div id="email-error" class="error text-danger pl-3" for="email" style="display: block;">
@@ -206,7 +206,7 @@
                     <i class="material-icons">lock_outline</i>
                   </span>
                 </div>
-                <input type="password" name="password" id="password" class="form-control" placeholder="{{ __('Password...') }}" required>
+                <input type="password" name="password" id="password" class="form-control" placeholder="{{ __('Contraseña...') }}" required>
               </div>
               @if ($errors->has('password'))
                 <div id="password-error" class="error text-danger pl-3" for="password" style="display: block;">
@@ -221,7 +221,7 @@
                     <i class="material-icons">lock_outline</i>
                   </span>
                 </div>
-                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" placeholder="{{ __('Confirm Password...') }}" required>
+                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" placeholder="{{ __('Confirmación de Contraseña...') }}" required>
               </div>
               @if ($errors->has('password_confirmation'))
                 <div id="password_confirmation-error" class="error text-danger pl-3" for="password_confirmation" style="display: block;">
