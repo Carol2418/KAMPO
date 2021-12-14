@@ -61,7 +61,7 @@ class ProductsController extends Controller
             'farmers_id' =>$request ->input('farmers_id')
         ]);
 
-        return redirect()->route('Products.index');
+        return redirect()->route('Products.index')->with('success','Producto creado correctamente');
     }
 
     /**
@@ -112,7 +112,7 @@ class ProductsController extends Controller
             'unit_value' =>$request ->input('unit_value'),
             'farmers_id' =>$request ->input('farmers_id'),
         ]);
-        return redirect()->route('Products.index');
+        return redirect()->route('Products.index')->with('success','Se modifico el producto correctamente');
     }
 
     /**
@@ -124,6 +124,6 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         $product=product::find($id)->delete();
-        return redirect()->route('Products.index');
+        return redirect()->route('Products.index')->with('success','El producto fue eliminado correctamente');
     }
 }

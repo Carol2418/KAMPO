@@ -39,7 +39,7 @@ class FarmersController extends Controller
             'land_type'=> $request->input('land_type'),
             'users_id'=>$request->input('user_id'),
         ]);
-        return redirect()->route('Farmers.index');
+        return redirect()->route('Farmers.index')->with('success','Agricultor creado correctamente');
     }
 
     /**
@@ -84,7 +84,7 @@ class FarmersController extends Controller
             'land_type'=> $request->input('land_type'),
             'users_id'=>$request->input('user_id'),
         ]);
-        return redirect()->route('Farmers.index');
+        return redirect()->route('Farmers.index')->with('success','Se modifico el agricultor correctamente');
     }
 
     /**
@@ -96,6 +96,6 @@ class FarmersController extends Controller
     public function destroy($id)
     {
         $farmer=farmer::find($id)->delete();
-        return redirect()->route('Farmers.index');
+        return redirect()->route('Farmers.index')->with('success','El agricultor fue eliminado correctamente');
     }
 }

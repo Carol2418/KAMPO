@@ -8,6 +8,11 @@
 
         <br>
         <div class="table-responsive"></div>
+        @if(session('success'))
+            <div class="alert alert-warning" role="success">
+            {{session('success')}}
+            </div>
+            @endif
         <table class="table table-striped">
             <thead class="table-success">
             <tr>

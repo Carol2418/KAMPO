@@ -50,7 +50,7 @@ class UsersController extends Controller
            'email'=> $request->input('email') ,
            'password'=> $request->input('password'),
        ]);
-       return redirect()->route('Users.index');
+       return redirect()->route('Users.index')->with('success','Usuario creado correctamente');
     }
 
     /**
@@ -100,7 +100,7 @@ class UsersController extends Controller
             'email'=> $request->input('email') ,
             'password'=> $request->input('password')
         ]);
-        return redirect()->route('Users.index');
+        return redirect()->route('Users.index')->with('success','Se modifico el usuario correctamente');
     }
 
     /**
@@ -112,6 +112,6 @@ class UsersController extends Controller
     public function destroy($id)
     {
         $user = User:: find($id)->delete();
-        return redirect()->route('Users.index');
+        return redirect()->route('Users.index')->with('success','El usuario fue eliminado correctamente');;
     }
 }
