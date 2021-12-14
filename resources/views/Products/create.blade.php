@@ -4,7 +4,7 @@
     <div class="container">
         <br>
         <div class="col-md-6 offset-md-3"></div>
-        <form action="{{route('Products.store')}}" method="post">
+        <form action="{{route('Products.store')}}" method="post" >
             @csrf
             <div class="table-responsive"></div>
             <table class="table table-success" >
@@ -31,7 +31,7 @@
                 </tr>
                 <tr>
                     <td>IMAGEN</td>
-                    <td><input type="text" class="form-control" name="image" value=""></td>
+                    <td><input type="file" class="form-control" name="image" value=""></td>
                 </tr>
                 <tr>
                     <td>TIPO DE PAQUETE</td>
@@ -58,7 +58,6 @@
             <button type="submit" class="btn btn-success  btn-sm">Guardar Cambios</button>
             <a href="{{route('Products.index')}}" class="btn btn-success btn-sm">Volver al inicio</a>
         </form>
-
     </div>
 
 

@@ -8865,15 +8865,16 @@ a.text-dark:focus {
 
 .btn.btn-primary.btn-link {
   background-color: transparent;
-  color: #9c27b0;
+  color: #1CCB30;
   box-shadow: none;
+  transition: 0.3s;
 }
 
 .btn.btn-primary.btn-link:hover,
 .btn.btn-primary.btn-link:focus,
 .btn.btn-primary.btn-link:active {
   background-color: transparent;
-  color: #9c27b0;
+  color: #1C9553;
 }
 
 .btn.btn-secondary {
@@ -16777,7 +16778,7 @@ label {
 .card.bg-primary,
 .card.card-rotate.bg-primary .front,
 .card.card-rotate.bg-primary .back {
-  background: linear-gradient(60deg, #ab47bc, #8e24aa);
+  background: linear-gradient(60deg, #1CCB30, #1C9553);
 }
 
 .card .card-header-info .card-icon,

@@ -23,7 +23,9 @@
                 <tr>
                     <td>{{$product->name}}</td>
                     <td>{{$product->type}}</td>
-                    <td>{{$product->image}}</td>
+                    <td>
+                    <img src="imagen/{{$product->image}}" width="60%">
+                    </td>
                     <td>
                         <form action="{{route('Products.destroy', $product->id)}}" method="post">
                             @csrf

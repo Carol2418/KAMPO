@@ -20,7 +20,7 @@
                 </tr>
                 <tr>
                     <td>FECHA DE VENCIMIENTO</td>
-                    <td><input type="text" class="form-control" name="expiration_date" value="{{$product->expiration_date}}"></td>
+                    <td><input type="date" class="form-control" name="expiration_date" value="{{$product->expiration_date}}"></td>
                 </tr>
                 <tr>
                     <td>CANTIDAD DE PRODUCTO</td>
