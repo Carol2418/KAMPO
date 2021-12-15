@@ -18,7 +18,7 @@ use App\Http\Controllers\FarmersController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('user', [UsersController::class, 'index'])->name('Users.index');
 Route::get('user/{id}', [UsersController::class, 'show'])->name('Users.show');
