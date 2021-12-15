@@ -16,7 +16,7 @@ use App\Http\Controllers\FarmersController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
@@ -47,3 +47,4 @@ Route::delete('Farmers/{id}', [FarmersController::class, 'destroy'])->name('Farm
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
